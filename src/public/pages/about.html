@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>Our team</title>
+    </head>
+    <body>
+        <header class="page-header">
+            <div class="container mobile-header">
+                <a href="/" class="logo">
+                    <span>Roflo-team</span>
+                </a>
+
+                <button
+                    type="button"
+                    class="menu-open-btn"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu"
+                >
+                    <svg class="menu-icon" viewBox="0 0 32 22">
+                        <use href="../images/icons.svg#icon-adid"></use>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="container header-container desktop-header">
+                <a href="/" class="logo">
+                    <span>Roflo-team</span>
+                </a>
+
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/team" class="nav-link">Team</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="contacts">
+                    <ul class="contacts-list">
+                        <li class="contacts-item">
+                            <a href="mailto:info@team.com" class="contact-link"
+                                >info@team.com</a
+                            >
+                        </li>
+                        <li class="contacts-item">
+                            <a
+                                href="https://github.com/"
+                                target="_blank"
+                                class="contact-link external"
+                                >GitHub Project</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <div class="mobile-menu-container">
+                    <button type="button" class="menu-close-btn">
+                        <svg class="close-icon" width="32" height="32">
+                            <use
+                                href="../images/icons.svg#icon-close-mobile"
+                            ></use>
+                        </svg>
+                    </button>
+
+                    <nav class="mobile-navigation">
+                        <ul class="mobile-nav-list">
+                            <li><a href="/" class="nav-link">Home</a></li>
+                            <li>
+                                <a href="/about" class="nav-link">About us</a>
+                            </li>
+                            <li><a href="/team" class="nav-link">Team</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="mobile-contacts">
+                        <ul class="mobile-contacts-list">
+                            <li>
+                                <a
+                                    href="mailto:info@team.com"
+                                    class="contact-link"
+                                    >info@team.com</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/"
+                                    target="_blank"
+                                    class="contact-link external"
+                                    >GitHub Project</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section-hero" id="">
+                <div class="hero-left">
+                    <div class="container hero-container">
+                        <div class="hero-content">
+                            <h1 class="hero-title">
+                                Майстри Node.js та Express з
+                                <span>Roflo-team</span>
+                            </h1>
+
+                            <p class="hero-description">
+                                Ми створюємо сучасні веб-застосунки, вивчаємо
+                                архітектуру клієнт-сервер та опановуємо магію
+                                бекенду в межах Лабораторної роботи №2.
+                            </p>
+
+                            <div class="hero-buttons">
+                                <a href="/team" class="btn btn-primary"
+                                    >Наша команда</a
+                                >
+                                <a
+                                    href="https://github.com"
+                                    target="_blank"
+                                    class="btn btn-outline"
+                                    >Проєкт на GitHub</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right"></div>
+            </section>
+            <section class="section-about">
+                <div class="container">
+                    <h2 class="about-title">About Our Work</h2>
+
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <div class="about-header-wrapper">
+                                <div class="about-icon-box">
+                                    <svg class="about-icon">
+                                        <use
+                                            href="../images/icons.svg#icon-strategy"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <h3 class="about-subtitle">Strategy</h3>
+                            </div>
+                            <p class="about-text">
+                                Ми ретельно плануємо кожен етап розробки нашого
+                                Node.js бекенду для максимальної стабільності.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-header-wrapper">
+                                <div class="about-icon-box">
+                                    <svg class="about-icon">
+                                        <use
+                                            href="../images/icons.svg#icon-punctuality"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <h3 class="about-subtitle">Punctuality</h3>
+                            </div>
+                            <p class="about-text">
+                                Дотримання дедлайнів — наш пріоритет. Кожен роут
+                                Express.js працює як годинник.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-header-wrapper">
+                                <div class="about-icon-box">
+                                    <svg class="about-icon">
+                                        <use
+                                            href="../images/icons.svg#icon-teamwork"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <h3 class="about-subtitle">Teamwork</h3>
+                            </div>
+                            <p class="about-text">
+                                Правильний поділ завдань та довіра — основа
+                                нашої командної роботи.
+                            </p>
+                        </li>
+                        <li class="about-item">
+                            <div class="about-header-wrapper">
+                                <div class="about-icon-box">
+                                    <svg class="about-icon">
+                                        <use
+                                            href="../images/icons.svg#icon-technologies"
+                                        ></use>
+                                    </svg>
+                                </div>
+                                <h3 class="about-subtitle">Technologies</h3>
+                            </div>
+                            <p class="about-text">
+                                Використовуємо найсучасніші пакети NPM та
+                                методики розробки клієнт-серверних систем.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section-team"></section>
+        </main>
+        <footer></footer>
+        <script src="../stylejs/mobilemenu.js"></script>
+    </body>
+</html>
