@@ -77,24 +77,34 @@
         </div>
     </header>
     <main>
-        <section class="section-hero"></section>
+        <section class="section-hero" id="">
+            <div class="hero-left">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Майстри Node.js та Express з <span>Roflo-team</span>
+                        </h1>
+        
+                        <p class="hero-description">
+                            Ми створюємо сучасні веб-застосунки, вивчаємо архітектуру клієнт-сервер
+                            та опановуємо магію бекенду в межах Лабораторної роботи №2.
+                        </p>
+        
+                        <div class="hero-buttons">
+                            <a href="/team" class="btn btn-primary">Наша команда</a>
+                            <a href="https://github.com" target="_blank" class="btn btn-outline">Проєкт на GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="hero-right"></div>
+        </section>
         <section class="section-about"></section>
         <section class="section-team"></section>
     </main>
     <footer>
     </footer>
-    <script>
-        const menu = document.getElementById("mobile-menu");
-        const openBtn = document.querySelector(".menu-open-btn");
-        const closeBtn = document.querySelector(".menu-close-btn");
-
-        openBtn.addEventListener("click", () => {
-            menu.classList.add("is-open");
-        });
-
-        closeBtn.addEventListener("click", () => {
-            menu.classList.remove("is-open");
-        });
-    </script>
+    <script src="../stylejs/mobilemenu.js"></script>
 </body>
 </html>

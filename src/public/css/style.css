@@ -23,25 +23,27 @@
 }
 
 body {
-    
+    padding-top: 60px;
 }
 
 
-
-
-/* --- Базові стилі (для мобільних) --- */
+/* ================= HEADER MOBILE ================= */
 .container {
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-/* ================= HEADER MOBILE ================= */
-
 .page-header {
     background-color: var(--header-bg);
     color: var(--header-text);
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: var(--card-shadow);
+
 }
 
 .mobile-header {
@@ -206,6 +208,106 @@ body {
     display: none;
 }
 
+/* ================= HERO SECTION (Mobile) ================= */
+
+.section-hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+        url('../images/hero-bg.jpg') center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: var(--white);
+
+    padding: 120px 0 60px;
+    position: relative;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-title {
+    font-family: var(--secondary-font);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: var(--primary-color);
+    border-radius: 1px;
+    border-color: #ffffff;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 32px;
+    color: #e7e7e7;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--white);
+
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background var(--transition), transform var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-primary:active {
+    transform: scale(0.97);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color var(--transition), border-color var(--transition), background var(--transition), transform var(--transition);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-outline:active {
+    transform: scale(0.97);
+}
+
 
 
 /* --- Адаптація для Планшетів (min-width: 768px) --- */
@@ -218,15 +320,75 @@ body {
         height: 70px;
     }
 
+    .menu-icon {
+        width: 32px;
+        height: 20px;
+    }
+
+    .section-hero {
+        display: flex;
+        min-height: 100vh;
+        padding: 0;
+        background: none;
+        align-items: stretch;
+    }
+
+    .hero-left {
+        width: 50%;
+        background: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 60px 20px 60px 0;
+    }
+
+    .hero-right {
+        width: 50%;
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+            url('../images/hero-bg-desktop.jpg') center/cover no-repeat;
+    }
+
+    .hero-container {
+        margin: 0;
+        padding-left: 30px;
+        text-align: left;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        gap: 16px;
+    }
+    
+    .hero-title {
+        margin-top: 0;
+        font-family: var(--secondary-font);
+        color: var(--text-color);
+    }
+
+
+    .hero-description {
+        color: var(--secondary-text);
+    }
+
+
 }
 
 /* --- Адаптація для Десктопів (min-width: 1158px) --- */
 @media screen and (min-width: 1158px) {
+    body {
+        padding-top: 80px;
+    }
+    
     .container {
         max-width: 1158px;
     }
 
     .mobile-header {
+        display: none;
+    }
+
+    .mobile-menu {
         display: none;
     }
 
@@ -262,7 +424,7 @@ body {
         margin: 0 auto;
     }
     
- .nav-list {
+    .nav-list {
         list-style: none;
         display: flex;
         gap: 80px;
@@ -300,7 +462,7 @@ body {
     }
     
     .contacts {
-       display: flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
     }
@@ -323,6 +485,20 @@ body {
 
     .contacts-list .contact-link:hover {
         color: var(--accent-color);
+    }
+
+    
+    .hero-left {
+        padding-right: 50px;
+    }
+
+    .hero-title {
+        font-size: 56px;
+    }
+
+    .hero-description {
+        font-size: 20px;
+        margin-bottom: 40px;
     }
         
     
