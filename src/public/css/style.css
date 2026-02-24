@@ -289,13 +289,11 @@ body {
 .btn-outline {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 18px;
     font-weight: 600;
     text-decoration: none;
-
     transition: color var(--transition), border-color var(--transition), background var(--transition), transform var(--transition);
 }
 
@@ -309,9 +307,75 @@ body {
 }
 
 
+.section-about {
+    background-color: var(--bg-color);
+    padding: 50px 0;
+}
+
+.about-title {
+    font-family: var(--secondary-font);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.about-item {
+    text-align: center;
+}
+
+
+
+.about-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.about-icon {
+    width: 2.5em;
+    height: 2.5em;
+    fill: currentColor;
+}
+
+.about-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.about-subtitle {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.about-text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--secondary-text);
+}
+
 
 /* --- Адаптація для Планшетів (min-width: 768px) --- */
 @media screen and (min-width: 768px) {
+    
+
     .container {
         max-width: 768px;
     }
@@ -370,7 +434,34 @@ body {
     .hero-description {
         color: var(--secondary-text);
     }
+    
+    .about-title {
+        margin-bottom: 50px;
+    } 
 
+    .about-list {
+        grid-template-columns: repeat(2, 1fr); /* Два блоки зверху, два знизу */
+        gap: 30px 24px;
+    }
+    
+    .about-item {
+        text-align: left; 
+    }
+    
+    .about-icon-box {
+        justify-content: flex-start;
+    }
+
+    .about-icon {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    .about-header-wrapper {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
 }
 
@@ -500,7 +591,31 @@ body {
         font-size: 20px;
         margin-bottom: 40px;
     }
+
+    .about-header-wrapper {
+        flex-direction: row;
+        gap: 10px;
+    }
         
+    .section-about {
+        padding: 80px 0; 
+    }
+
+    .about-title {
+    margin-bottom: 50px;
+    } 
+
+    .about-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-subtitle {
+        font-size: 20px;
+    }
     
+    .about-icon {
+        width: 1.8em;
+        height: 1.8em;
+    }
 
 }
