@@ -1,0 +1,330 @@
+:root {
+    /* --- Кольори Node.js Professional --- */
+    --bg-color: #ffffff;  /* Основний фон сторінки */
+    --text-color: #212121; /* Колір основного тексту */
+    --primary-color: #339933; /* Фзелений (Node.js) */
+    --primary-dark: #2b822b; /* Темніший зелений для ховерів */
+    --accent-color: #66cc33; /* Яскравий зелений для акцентів */
+    --header-bg: #1a1a1a; /* Темний фон для хедера та футера */
+    --header-text: #f0f0f0; /* Світлий текст для темних блоків */
+    --secondary-text: #757575; /* Сірий колір для допоміжного тексту */
+    --white: #ffffff; /* Чистий білий */
+
+    /* --- Шрифти (згідно з підключеними Google Fonts) --- */
+    --main-font: 'Roboto', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+
+    /* --- Допоміжні параметри --- */
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* Для плавної анімації посилань */
+    --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    
+}
+
+
+
+
+/* --- Базові стилі (для мобільних) --- */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* ================= HEADER MOBILE ================= */
+
+.page-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    position: relative;
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+/* Логотип */
+.logo {
+    font-family: var(--secondary-font);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: var(--accent-color);
+}
+
+
+.menu-open-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary-color);
+
+}
+
+.menu-open-btn:hover {
+    color: var(--accent-color);
+}
+
+.menu-icon {
+    width: 28px;
+    height: 18px;
+    display: block;
+}
+
+.desktop-header {
+    display: none;
+}
+
+/* ================= MOBILE MENU BEAUTY ================= */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 65%;
+    max-width: 400px;
+    height: 100vh;
+
+    background: rgba(26, 26, 26, 0.9);
+    /* напівпрозорий сірий */
+    backdrop-filter: blur(6px);
+
+    transform: translateX(100%);
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    z-index: 1000;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.is-open {
+    transform: translateX(0);
+}
+
+/* Кнопка закриття */
+.menu-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.close-icon {
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    transition: color var(--transition);
+}
+
+.menu-close-btn:hover .close-icon {
+    color: var(--accent-color);
+}
+
+.mobile-nav-list {
+    list-style: none;
+    margin: 80px 0 40px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mobile-nav-list .nav-link {
+    font-size: 26px;
+    color: var(--white);
+    text-decoration: none;
+    position: relative;
+    transition: color var(--transition);
+}
+
+.mobile-nav-list .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: width var(--transition);
+}
+
+.mobile-nav-list .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.mobile-nav-list .nav-link:hover::after {
+    width: 100%;
+}
+
+.mobile-contacts-list {
+    list-style: none;
+    padding: 0;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    font-size: 18px;
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+}
+
+.desktop-header {
+    display: none;
+}
+
+
+
+/* --- Адаптація для Планшетів (min-width: 768px) --- */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .mobile-header {
+        height: 70px;
+    }
+
+}
+
+/* --- Адаптація для Десктопів (min-width: 1158px) --- */
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+
+    .desktop-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        height: 80px;
+        background-color: var(--header-bg);
+        color: var(--header-text);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 900;
+        padding: 0 40px;
+        box-shadow: var(--card-shadow);
+    }
+    
+    .header-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1400px;
+    }
+    
+    .desktop-header .logo {
+        font-size: 28px;
+        margin-right: auto;
+    }
+    
+    .navigation {
+        margin: 0 auto;
+    }
+    
+ .nav-list {
+        list-style: none;
+        display: flex;
+        gap: 80px;
+        margin: auto;
+        padding: 0;
+    }
+    
+    .nav-list .nav-link {
+        color: var(--white);
+        font-size: 20px;
+        text-decoration: none;
+        position: relative;
+        transition: color var(--transition);
+        padding-bottom: 4px;
+    }
+    
+
+    .nav-list .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 3px;
+        background: var(--primary-color);
+        transition: width var(--transition);
+    }
+    
+    .nav-list .nav-link:hover {
+        color: var(--primary-color);
+    }
+    
+    .nav-list .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    .contacts {
+       display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .contacts-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contacts-list .contact-link {
+        color: var(--primary-color);
+        font-size: 16px;
+        text-decoration: none;
+        transition: color var(--transition);
+    }
+
+    .contacts-list .contact-link:hover {
+        color: var(--accent-color);
+    }
+        
+    
+
+}
