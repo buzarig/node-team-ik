@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+
+    <main>
+        <section class="section-team">
+            <div class="container">
+                <h1 class="team-title"><%= brigadeName %></h1>
+                <p class="team-subtitle">Наша команда — <%= members.length %> учасників</p>
+
+                <ul class="team-list">
+                    <% members.forEach(function(member) { %>
+                    <li class="team-card">
+                        <div class="card-img-wrapper">
+                            <img
+                                src="<%= member.photo %>"
+                                alt="<%= member.name %>"
+                                class="card-img"
+                                onerror="this.src='/images/default-avatar.png'"
+                            />
+                        </div>
+                        <div class="card-content">
+                            <h2 class="card-name"><%= member.name %></h2>
+                            <p class="card-group">Група: <strong><%= member.group %></strong></p>
+                            <p class="card-age">Вік: <%= member.age %> років</p>
+
+                            <div class="card-skills">
+                                <h3 class="card-section-title">Навички</h3>
+                                <ul class="skill-list">
+                                    <% member.skills.forEach(function(skill) { %>
+                                    <li class="skill-tag"><%= skill %></li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+
+                            <div class="card-hobbies">
+                                <h3 class="card-section-title">Хобі</h3>
+                                <ul class="hobby-list">
+                                    <% member.hobbies.forEach(function(hobby) { %>
+                                    <li class="hobby-tag"><%= hobby %></li>
+                                    <% }); %>
+                                </ul>
+                            </div>
+
+                            <a href="/member/<%= member.id %>" class="btn-primary card-btn">Детальніше</a>
+                        </div>
+                    </li>
+                    <% }); %>
+                </ul>
+            </div>
+        </section>
+    </main>
+        <%- include('../partials/footer') %>
+</body>
+</html>

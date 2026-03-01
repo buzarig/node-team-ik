@@ -1,16 +1,12 @@
 const express = require('express');
+const teamController = require('../controllers/team.controller');
 
 const router = express.Router();
 
-// Страница команды (рендер EJS, шаблон сделают другие)
-router.get('/team', (req, res) => {
-    res.render('pages/team');
-});
+// Страница команды — динамическая, данные из JSON
+router.get('/team', teamController.showTeam);
 
-// Динамическая страница участника (рендер EJS, шаблон сделают другие)
-router.get('/member/:id', (req, res) => {
-    const { id } = req.params;
-    res.render('pages/member', { id });
-});
+// Динамическая страница участника
+router.get('/member/:id', teamController.showMember);
 
 module.exports = router;
