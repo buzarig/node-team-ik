@@ -1,0 +1,17 @@
+[
+  {
+    "gameId": "g1",
+    "team1Score": 2,
+    "team2Score": 1
+  },
+  {
+    "gameId": "g2",
+    "team1Score": 100123,
+    "team2Score": 123
+  },
+  {
+    "gameId": "g3",
+    "team1Score": 3,
+    "team2Score": 2
+  }
+]
