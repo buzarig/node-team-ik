@@ -1,62 +1,49 @@
-<!DOCTYPE html>
-<html lang="uk">
-<head>
-    <%- include('../partials/head') %>
-</head>
-<body>
-    <%- include('../partials/header') %>
+<section class="section-member">
+    <div class="container">
+        <a href="/team" class="back-link">&larr; Назад до команди</a>
 
-    <main>
-        <section class="section-member">
-            <div class="container">
-                <a href="/team" class="back-link">&larr; Назад до команди</a>
-
-                <div class="member-profile">
-                    <div class="member-photo-wrapper">
-                        <img
-                            src="<%= member.photo %>"
-                            alt="<%= member.name %>"
-                            class="member-photo"
-                            onerror="this.src='/images/default-avatar.png'"
-                        />
-                    </div>
-
-                    <div class="member-info">
-                        <h1 class="member-name"><%= member.name %></h1>
-                        <p class="member-group">Група: <strong><%= member.group %></strong></p>
-                        <p class="member-age">Вік: <%= member.age %> років</p>
-
-                        <div class="member-section">
-                            <h2 class="member-section-title">Навички</h2>
-                            <ul class="skill-list">
-                                <% member.skills.forEach(function(skill) { %>
-                                <li class="skill-tag"><%= skill %></li>
-                                <% }); %>
-                            </ul>
-                        </div>
-
-                        <div class="member-section">
-                            <h2 class="member-section-title">Хобі</h2>
-                            <ul class="hobby-list">
-                                <% member.hobbies.forEach(function(hobby) { %>
-                                <li class="hobby-tag"><%= hobby %></li>
-                                <% }); %>
-                            </ul>
-                        </div>
-
-                        <% if (member.contacts && member.contacts.github) { %>
-                        <div class="member-section">
-                            <h2 class="member-section-title">Контакти</h2>
-                            <a href="<%= member.contacts.github %>" target="_blank" class="btn-outline">
-                                GitHub профіль
-                            </a>
-                        </div>
-                        <% } %>
-                    </div>
-                </div>
+        <div class="member-profile">
+            <div class="member-photo-wrapper">
+                <img
+                    src="<%= member.photo %>"
+                    alt="<%= member.name %>"
+                    class="member-photo"
+                    onerror="this.src='/images/default-avatar.png'"
+                />
             </div>
-        </section>
-    </main>
-        <%- include('../partials/footer') %>
-</body>
-</html>
+
+            <div class="member-info">
+                <h1 class="member-name"><%= member.name %></h1>
+                <p class="member-group">Група: <strong><%= member.group %></strong></p>
+                <p class="member-age">Вік: <%= member.age %> років</p>
+
+                <div class="member-section">
+                    <h2 class="member-section-title">Навички</h2>
+                    <ul class="skill-list">
+                        <% member.skills.forEach(function(skill) { %>
+                        <li class="skill-tag"><%= skill %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+
+                <div class="member-section">
+                    <h2 class="member-section-title">Хобі</h2>
+                    <ul class="hobby-list">
+                        <% member.hobbies.forEach(function(hobby) { %>
+                        <li class="hobby-tag"><%= hobby %></li>
+                        <% }); %>
+                    </ul>
+                </div>
+
+                <% if (member.contacts && member.contacts.github) { %>
+                <div class="member-section">
+                    <h2 class="member-section-title">Контакти</h2>
+                    <a href="<%= member.contacts.github %>" target="_blank" class="btn-outline">
+                        GitHub профіль
+                    </a>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>

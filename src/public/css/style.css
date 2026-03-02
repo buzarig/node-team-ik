@@ -24,6 +24,13 @@
 
 body {
     padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 
@@ -287,6 +294,7 @@ body {
 }
 
 .btn-outline {
+    display: inline-block;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
     padding: 12px 20px;
@@ -715,7 +723,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: var(--text-color);
-    margin: 16px 10px 8px;
+    margin: 24px 0 12px;
 }
 
 .skill-list,

@@ -1,12 +1,11 @@
 const express = require('express');
 const path = require('path');
+const homeController = require('../controllers/home.controller');
 
 const router = express.Router();
 
-// Главная (рендер EJS, шаблон сделают другие)
-router.get('/', (req, res) => {
-    res.render('pages/home', { title: 'Home' });
-});
+// Главная (рендер EJS через контроллер)
+router.get('/', homeController.renderHome);
 
 // Статическая HTML страница (.html) — требование 2 лабы
 router.get('/about', (req, res) => {
