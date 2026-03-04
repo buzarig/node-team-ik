@@ -1,26 +1,32 @@
 const express = require('express');
 const path = require('path');
 
-const indexRoutes = require('./routes/index.routes');
-const teamRoutes = require('./routes/team.routes');
+const scheduleRoutes = require('./routes/schedule.routes');
+const adminRoutes = require('./routes/admin.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ---- View engine (EJS) ----
-app.set('views', path.join(__dirname, 'views')); // папку views создадут другие
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // ---- Static files ----
-app.use(express.static(path.join(__dirname, 'public'))); // папку public создадут другие
+app.use(express.static(path.join(__dirname, 'public')));
+
+// ---- Body parser (for POST forms) ----
+app.use(express.urlencoded({ extended: true }));
 
 // ---- Routes ----
-app.use('/', indexRoutes);
-app.use('/', teamRoutes);
+app.use('/', scheduleRoutes);
+app.use('/', adminRoutes);
 
 // ---- 404 fallback ----
 app.use((req, res) => {
-    res.status(404).send('404 Not Found');
+    res.status(404).render('layout', {
+        title: '404',
+        body: 'pages/404'
+    });
 });
 
 app.listen(PORT, () => {
