@@ -16,7 +16,7 @@
       "name": "Кульчицький Микола",
       "age": 19,
       "group": "ІК-41",
-      "hobbies": ["чіпси", "здавати курсові Юрію Базаку", "паркур"],
+      "hobbies": ["чіпси", "здавати курсові Юрію Базаці", "паркур"],
       "skills": ["HTML", "CSS", "EJS"],
       "photo": "/images/kulchytskyi-mykola.jpg",
       "contacts": { "github": "https://github.com/buzarig" }
@@ -36,10 +36,10 @@
       "name": "Антон Степченко",
       "age": 19,
       "group": "ІК-41",
-      "hobbies": ["шахи", "баскетбол", "технології"],
+      "hobbies": ["шахи", "майнкрафт", "технології"],
       "skills": ["SQL basics", "REST", "Postman"],
       "photo": "/images/stepchenko-anton.jpg",
-      "contacts": { "github": "https://github.com/" }
+      "contacts": { "github": "https://github.com/AStepchenkooo" }
     },
     {
       "id": "sereda-kseniia",
@@ -49,7 +49,7 @@
       "hobbies": ["малювання", "музика", "танці"],
       "skills": ["CSS", "UI", "Figma basics"],
       "photo": "/images/sereda-kseniia.jpg",
-      "contacts": { "github": "https://github.com/seredakseniia" }
+      "contacts": { "github": "https://github.com/Kimmimaru" }
     }
   ]
 }
