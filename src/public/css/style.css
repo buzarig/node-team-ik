@@ -1,5 +1,6 @@
+/* ================= BASIC SETTINGS ================= */
+
 :root {
-    /* --- Кольори Node.js Professional --- */
     --bg-color: #ffffff;  /* Основний фон сторінки */
     --text-color: #212121; /* Колір основного тексту */
     --primary-color: #339933; /* Фзелений (Node.js) */
@@ -34,7 +35,7 @@ main {
 }
 
 
-/* ================= HEADER MOBILE ================= */
+/* ================= HEADER (Mobile) ================= */
 .container {
     width: 100%;
     padding: 0 15px;
@@ -60,7 +61,7 @@ main {
     height: 60px;
 }
 
-/* Логотип */
+
 .logo {
     font-family: var(--secondary-font);
     font-weight: 800;
@@ -68,6 +69,8 @@ main {
     line-height: 1;
     color: var(--primary-color);
     text-decoration: none;
+
+    transition: color var(--transition);
 }
 
 .logo:hover {
@@ -85,6 +88,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: color var(--transition);
 
     color: var(--primary-color);
 
@@ -115,7 +120,6 @@ main {
     height: 100vh;
 
     background: rgba(26, 26, 26, 0.9);
-    /* напівпрозорий сірий */
     backdrop-filter: blur(6px);
 
     transform: translateX(100%);
@@ -131,7 +135,6 @@ main {
     transform: translateX(0);
 }
 
-/* Кнопка закриття */
 .menu-close-btn {
     background: none;
     border: none;
@@ -314,6 +317,7 @@ main {
     transform: scale(0.97);
 }
 
+/* ================= ABOUT SECTION (Mobile) ================= */
 
 .section-about {
     background-color: var(--bg-color);
@@ -341,8 +345,6 @@ main {
 .about-item {
     text-align: center;
 }
-
-
 
 .about-header-wrapper {
     display: flex;
@@ -382,11 +384,12 @@ main {
 
 /* --- Адаптація для Планшетів (min-width: 768px) --- */
 @media screen and (min-width: 768px) {
-    
 
     .container {
         max-width: 768px;
     }
+
+/* ================= HEADER (Tablet) ================= */
 
     .mobile-header {
         height: 70px;
@@ -396,6 +399,8 @@ main {
         width: 32px;
         height: 20px;
     }
+
+/* ================= HERO SECTION (Tablet) ================= */
 
     .section-hero {
         display: flex;
@@ -443,12 +448,14 @@ main {
         color: var(--secondary-text);
     }
     
+/* ================= ABOUT SECTION (Tablet) ================= */
+
     .about-title {
         margin-bottom: 50px;
     } 
 
     .about-list {
-        grid-template-columns: repeat(2, 1fr); /* Два блоки зверху, два знизу */
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px 24px;
     }
     
@@ -482,6 +489,8 @@ main {
     .container {
         max-width: 1158px;
     }
+
+/* ================= HEADER (Desktop) ================= */
 
     .mobile-header {
         display: none;
@@ -586,6 +595,7 @@ main {
         color: var(--accent-color);
     }
 
+/* ================= HERO SECTION (Desktop) ================= */
     
     .hero-left {
         padding-right: 50px;
@@ -599,6 +609,8 @@ main {
         font-size: 20px;
         margin-bottom: 40px;
     }
+
+/* ================= ABOUT SECTION (Desktop) ================= */
 
     .about-header-wrapper {
         flex-direction: row;
@@ -627,6 +639,9 @@ main {
     }
 
 }
+
+
+
 
 /* ================= FOOTER ================= */
 .page-footer {
